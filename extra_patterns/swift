@@ -1,0 +1,30 @@
+# Swift logs documentation: http://docs.openstack.org/developer/swift/logs.html
+
+# Swift proxy_access.log 'datetime' mapping
+SWIFT_PROXY_DATETIME %{MONTHDAY}[/]%{MONTH}[/]%{YEAR}[/]%{HOUR}[/]%{MINUTE}[/]%{SECOND}
+SWIFT_DATETIME %{MONTHDAY}[/]%{MONTH}[/]%{YEAR}[:]%{HOUR}[:]%{MINUTE}[:]%{SECOND}
+SWIFT_AUDITOR_DATETIME %{DAY:AuditorFromDate}[ ]%{SYSLOGTIMESTAMP}[ ]%{YEAR}
+
+# Swift all.log 'datetime' mapping
+SWIFT_STORAGE_DATETIME %{MONTHDAY}[/]%{MONTH}[/]%{YEAR}[:]%{TIME}
+
+# TXN is pattern for swift transacion ID
+TXN (?:%{WORD}[-]%{WORD}|%{WORD}[-]%{WORD}[-]%{WORD}[-]%{WORD})
+
+# PYTHON PATH Format
+PYTHONPATH %{WORD}[-]%{WORD}%{PATH}[ ]%{WORD}%{PATH}[ ]%{WORD}%{PATH}
+
+# Copy from unicode object path which allow unicode
+#\w matches any word character (equal to [a-zA-Z0-9_])
+#\s matches any whitespace character (equal to [\r\n\t\f\v ])
+#\/ matches the character / literally (case sensitive)
+#\. matches the character . literally (case sensitive)
+#\p{L} matches any kind of letter from any language
+#\p{N} matches any kind of numeric character in any script
+#\p{S} matches any math symbols, currency signs, dingbats, box-drawing characters, etc
+#\p{P} matches any kind of punctuation character
+COPYFROMUNICODE [\w\W\s\/\.\p{L}\p{N}\p{S}\p{P}]+
+
+# DASH
+DASH -
+
