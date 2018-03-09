@@ -15,7 +15,7 @@ You need to move `conf.d/*` and `extra_patterns` under `/etc/logstash/` and rest
 SwiftStack leverages *rsyslog* as log sender and receiver. Check the resource folder for additional information.
 
 ### Grok Patterns Schema
- * [swift grok pattern schema](https://docs.google.com/a/swiftstack.com/spreadsheets/d/e/2PACX-1vTnWdxCnTi47YQ-rLSCL4e4cuTasL102Zc1pktm5AZk8hj-2hvNr-y0upzubazEZ1-x51ncAAOMYnSD/pubhtml)
+ * [swift grok pattern schema](https://docs.google.com/spreadsheets/d/e/2PACX-1vTjsN4XBtxXJfbFPVvmxgz3yHlYpqlhEcm9s3S9kra3D78oJJcHvfaTDKWRZr99JB9sd9jpLJAiueZA/pubhtml)
 
 ### Reference OpenStack Document
  * [openstack swift offical log pattern](https://docs.openstack.org/swift/latest/logs.html)
